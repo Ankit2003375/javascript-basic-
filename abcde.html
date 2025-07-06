@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Pattern</title>
+    <script>
+        function printNumber() {
+            var n = parseInt(document.getElementById("tb1").value);
+            var output = "";
+            
+            for (var i = 1; i <= n; i++) {
+                var chCode = 'A'.charCodeAt(0);
+                for (var j = 1; j <= n; j++) {
+                    output += String.fromCharCode(chCode) + " ";
+                    chCode++;
+                }output += "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter the number</td>
+            <td><input type="text" id="tb1"></td>
+            <td><button type="submit" onclick="printNumber()">Show</button></td>
+        </tr>
+    </table>
+
+    <div id="result" ></div>
+</body>
+</html>

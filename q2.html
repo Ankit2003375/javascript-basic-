@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reverseNum(){
+        var n,a,b,c,res;
+        n = parseInt(document.getElementById("tb1").value);
+        a = parseInt(n/100);
+        b = parseInt((n/10)%10); 
+        c = parseInt(n%10);
+        res = ((c*100)+(b*10)+a);
+        document.getElementById("tb2").value = res ;
+
+    
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Reverse Three number </h1>
+        <table border="1">
+
+         <tr>
+            <td> enter three number </td>
+            <td><input type="text" id="tb1"></td>
+         </tr>   
+         <tr>
+            <td> result </td>
+            <td><input type="text" id="tb2"></td>
+         </tr> 
+         <tr>
+            <td> click here </td>
+            <td>
+                <button type="submit" onclick="reverseNum()"> click </button>
+            </td>
+         </tr>  
+        </table>
+    </center>
+    
+</body>
+</html>
